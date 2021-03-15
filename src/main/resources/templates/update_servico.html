@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>SICO - Sistema de Controle</title>
+
+<link rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+</head>
+<body>
+	<div class="container">
+		<h1>Gestão de serviços</h1>
+		<hr>
+		<h2>Editar serviço</h2>
+
+		<form action="#" th:action="@{/saveServico}" th:object="${servico}"
+			method="POST">
+			
+			<!-- Add hidden form field to handle update -->
+			<input type="hidden" th:field="*{idservico}" />
+			
+			<input type="text" th:field="*{descricao}" class="form-control mb-4 col-4">
+				
+				<button type="submit" class="btn btn-info col-2"> Atualizar serviço</button>
+		</form>
+		
+		<hr>
+		
+		<a th:href = "@{/servicos}"> Voltar para lista de serviços</a>
+	</div>
+</body>
+</html>

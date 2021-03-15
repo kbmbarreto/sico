@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>SICO - Sistema de Controle</title>
+
+<link rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+	integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+	crossorigin="anonymous">
+	
+</head>
+<body>
+
+<br>
+<center>
+<br>
+<h2>SICO - Sistema de Controle</h2>
+<br>
+<a th:href = "@{/clientes}" class="btn btn-primary btn-sm mb-3"> Clientes </a>
+<a th:href = "@{/servicos}" class="btn btn-primary btn-sm mb-3"> Serviços </a>
+<a th:href = "@{/apontamentos}" class="btn btn-primary btn-sm mb-3"> Apontamentos </a>
+<a th:href = "@{/projetos}" class="btn btn-primary btn-sm mb-3"> Projetos </a>
+<a th:href = "@{/planos}" class="btn btn-primary btn-sm mb-3"> Planos </a>
+<a th:href = "@{/}" class="btn btn-primary btn-sm mb-3"> Relatórios </a>
+</center>
+</body>
+</html>
