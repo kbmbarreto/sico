@@ -24,7 +24,7 @@ public class ApontamentoController {
 	// display list of apontamentos
 	@GetMapping("/apontamentos")
 	public String viewApontamentoPage(Model model) {
-		return findPaginated(1, "data", "asc", model);		
+		return findPaginated(1, "data", "desc", model);		
 	}
 	
 	@GetMapping("/showNewApontamentoForm")
