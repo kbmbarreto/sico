@@ -5,16 +5,16 @@ pipeline {
         timeout(time: 80, unit: 'MINUTES')
     }
 
-//     stages {
-//         stage('Preparation') {
-//             steps {
-//                 sh 'rm -rf /home/cskmacedo/.jenkins/jobs/sico-production/builds/*/archive/br/com/kmacedo/sico/1.0.0/mycar-1.0.0.jar'
-//             }
-//         }
+    stages {
+        stage('Preparation') {
+            steps {
+                sh 'rm -rf /home/cskmacedo/.jenkins/jobs/sico-production/builds/*/archive/br/com/kmacedo/sico/1.0.1/sico-1.0.1.jar'
+            }
+        }
 
         stage('Clone project') {
             steps {
-                git branch: 'main', url: 'https://github.com/kbmbarreto/sico'
+                git branch: 'master', url: 'https://github.com/kbmbarreto/sico'
             }
         }
 
