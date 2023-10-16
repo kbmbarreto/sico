@@ -1,28 +1,75 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
-<meta charset="UTF-8">
-<title>SICO - Sistema de Controle</title>
+	<meta charset="UTF-8">
+	<title>SICO - Sistema de Controle</title>
 
-<link rel="stylesheet"
-	href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
-	integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
-	crossorigin="anonymous">
-	
+	<link rel="stylesheet"
+		  href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+		  integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+		  crossorigin="anonymous">
+
+	<style>
+		body {
+			font-family: Arial, sans-serif;
+			background-color: #f0f0f0;
+			color: #333;
+			text-align: center;
+			display: flex;
+			flex-direction: column;
+			min-height: 100vh;
+			background-image: url('URL_DA_IMAGEM'); /* Substitua 'URL_DA_IMAGEM' pela URL da sua imagem de fundo */
+			background-repeat: no-repeat;
+			background-attachment: fixed;
+			background-size: cover;
+		}
+
+		h2 {
+			color: #ff6600; /* Laranja */
+			margin-bottom: 20px;
+		}
+
+		.menu {
+			margin-top: 20px;
+		}
+
+		.btn {
+			background-color: #0078d4; /* Azul */
+			color: #fff;
+			margin: 0 10px 10px 0;
+			border-radius: 5px;
+		}
+
+		.btn:hover {
+			background-color: #005a9e; /* Azul mais escuro */
+		}
+
+		.footer {
+			position: fixed;
+			bottom: 0;
+			left: 0;
+			width: 100%;
+			background-color: #ff6600; /* Laranja */
+			color: #fff;
+			padding: 10px;
+		}
+	</style>
+
 </head>
 <body>
-
-<br>
-<center>
-<br>
 <h2>SICO - Sistema de Controle</h2>
-<br>
-<a th:href = "@{/clientes}" class="btn btn-primary btn-sm mb-3"> Clientes </a>
-<a th:href = "@{/servicos}" class="btn btn-primary btn-sm mb-3"> Serviços </a>
-<a th:href = "@{/apontamentos}" class="btn btn-primary btn-sm mb-3"> Apontamentos </a>
-<a th:href = "@{/projetos}" class="btn btn-primary btn-sm mb-3"> Projetos </a>
-<a th:href = "@{/planos}" class="btn btn-primary btn-sm mb-3"> Planos </a>
-<a th:href = "@{/}" class="btn btn-primary btn-sm mb-3"> Relatórios </a>
-</center>
+
+<div class="menu">
+	<a th:href="@{/clientes}" class="btn btn-primary btn-sm">Clientes</a>
+	<a th:href="@{/servicos}" class="btn btn-primary btn-sm">Serviços</a>
+	<a th:href="@{/apontamentos}" class="btn btn-primary btn-sm">Apontamentos</a>
+	<a th:href="@{/projetos}" class="btn btn-primary btn-sm">Projetos</a>
+	<a th:href="@{/planos}" class="btn btn-primary btn-sm">Planos</a>
+	<a th:href="@{/}" class="btn btn-primary btn-sm">Relatórios</a>
+</div>
+
+<div class="footer">
+	Criado por Kleber
+</div>
 </body>
 </html>
