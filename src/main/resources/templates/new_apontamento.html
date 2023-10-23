@@ -18,24 +18,24 @@
 			method="POST">
 			<input type="date" th:field="*{data}"
 				placeholder="Data" class="form-control mb-4 col-4">
-				
+
 				<input type="text" th:field="*{projeto.idprojeto}"
-				placeholder="Projeto" class="form-control mb-4 col-4">
-				
+				value="" placeholder="Projeto" class="form-control mb-4 col-4">
+
 				<input type="text" th:field="*{horas}"
 				placeholder="Horas" class="form-control mb-4 col-4">
-				
+
 				<input type="text" th:field="*{cliente.idcliente}"
-				placeholder="Cliente" class="form-control mb-4 col-4">
-				
+				value="" placeholder="Cliente" class="form-control mb-4 col-4">
+
 				<input type="text" th:field="*{servico.idservico}"
-				placeholder="Servico" class="form-control mb-4 col-4">
-								
+				value="" placeholder="Servico" class="form-control mb-4 col-4">
+
 				<button type="submit" class="btn btn-info col-2"> Salvar apontamento</button>
 		</form>
-		
+
 		<hr>
-		
+
 		<a th:href = "@{/apontamentos}"> Voltar para lista de apontamentos</a>
 	</div>
 </body>
